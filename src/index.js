@@ -11,18 +11,6 @@ root.render(
   </React.StrictMode>
 );
 
-class App extends React.Component {
-
-}
-
-class Stack extends React.Component {
-
-
-}
-
-class Monthly extends React.Component {
-  
-}
 
 
 
