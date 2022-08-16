@@ -1,21 +1,23 @@
 import { fontFamily } from '@mui/system';
 import * as React from 'react';
 
-export default class ToDo extends React.Component {
-    // need to create an interactive list that will organize items based on importance - due date(?) - how long they've been on the list - reoccuring tasks (ie garbage) 
+//  export default function toDo(listItems) {
+//     const style = {
+//         alignContent: 'normal',
+//         fontFamily: 'copperplate',
+//         color: '#ff69b4',
+//     }
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const style = {
-            alignContent: 'normal'
-        }
-
-        return (
-            <h1 style={style}>blah</h1>
-        )
-    }
+//     return (
+//         <h1 style={style}>Do This</h1>
+//     ) 
+// };
+export default function ToDo() {
+return (  
+<div className='ToDo'>
+            <h1>Do This</h1>
+    
+</div>
+  
+)
 }
-

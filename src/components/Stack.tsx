@@ -1,9 +1,14 @@
 import * as React from 'react';
+import ToDo from './todo/ToDo';
+import ToDoList from './todo/ToDoList';
+import Week from './Week';
 
-export default class Stack extends React.Component {
-    // This will contain the week at a glance and the to do list 
-    constructor(props){
-      super(props);
-    }
-  
-  }
+ export default function Stack() {
+     return (
+         <div className='Stack'>
+             <Week />
+             <ToDo />
+             <ToDoList />
+         </div>
+     )
+ }
