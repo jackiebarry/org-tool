@@ -1,28 +1,30 @@
 import { fontFamily } from '@mui/system';
+import { List, ListItem, ListItemButton, ListItemIcon, Checkbox, ListItemText} from '@mui/material';
 import * as React from 'react';
 
-export default class ToDoList extends React.Component {
-    // need to create an interactive list that will organize items based on importance - due date(?) - how long they've been on the list - reoccuring tasks (ie garbage) 
+export default function ToDoList() {
+    const [checkedItem, setCheckedItem] = React.useState(false);
 
-    constructor(props) {
-        super(props);
-    }
+    function handleToggle() {
+        setCheckedItem(!checkedItem);
+    };
 
-    render() {
-        const style = {
-            alignContent: 'normal',
-            fontFamily: 'copperplate',
-            color: '#ff69b4',
-        }
+    const style = {
+        textDecoration: checkedItem ? 'line-through' : undefined
+    };
 
-return (
-            <div id="listItems" style ={style}>
-                    <ul>
-                        <li>Baby slippers for Megan </li>
-                        <li>Baby slippers for Pikes </li>
-                        <li>Baby slippers for Koady</li>
-                    </ul>
-            </div>
-        )
-        }
+    return (
+        <List style={style}>
+            <ListItem>
+                <ListItemButton onClick={handleToggle}>
+                    <ListItemIcon>
+                        <Checkbox
+                            checked={checkedItem}
+                        />
+                    </ListItemIcon>
+                    <ListItemText primary={'Baby Slippers for Megan'} />
+                </ListItemButton>
+            </ListItem>
+        </List>
+    )
 }
