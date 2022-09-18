@@ -15,7 +15,7 @@ export default function ToDoList() {
     const [items, setItems] = React.useState<Todo[]>([
         {id: foo++, name: 'unpack', done: false},
         {id: foo++, name: 'buy sugar', done: false},
-        {id: foo++, name: 'move home', done: true}
+        {id: foo++, name: 'move home', done: false}
     ]);
     const [count, updateCount] = React.useState(foo++)
 
