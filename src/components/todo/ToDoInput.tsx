@@ -21,7 +21,7 @@ export default function ToDoInput(props) {
 return (
     <div>
         <IconButton  onClick={e => props.onSubmit(buildTodo()) }>
-            <AddCircleOutline fontSize="small" sx={{ color: 'pink'}}/>
+            <AddCircleOutline fontSize="medium" sx={{ color: 'teal'}}/>
         </IconButton>
         <input type="text" onChange={e => setText(e.target.value)} />
         
