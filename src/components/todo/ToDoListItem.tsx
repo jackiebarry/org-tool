@@ -2,7 +2,6 @@ import { fontFamily } from '@mui/system';
 import { List, ListItem, ListItemButton, ListItemIcon, Checkbox, ListItemText} from '@mui/material';
 // import { pink } from '@mui/material/colors';
 // import Icon from '@mui/material/Icon';
-import ToDoListItemInput from './ToDoListItemInput';
 import ToDoInput from './ToDoInput';
 import * as React from 'react';
 // import { inputAdornmentClasses } from '@mui/material';
@@ -26,7 +25,6 @@ export default function ToDoListItem(props) {
                 </ListItemIcon>
                 <ListItemText primary={item.name} />               
             </ListItemButton>
-            {/* <ToDoListItemInput />  */}
         </ListItem>
         
     )

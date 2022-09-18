@@ -10,23 +10,22 @@ import TextField from '@mui/material/TextField';
 import { inputAdornmentClasses } from '@mui/material';
 import * as React from 'react';
 
-// https://stackoverflow.com/questions/70450954/adding-input-from-textarea-form-to-a-list-with-react
 
 export default function ToDoInput(props) {
-   const state = {
-        input: '',
-        list: []
+    const [text, setText] = React.useState<string>('')
+
+    const buildTodo = ()=> {
+        return {
+            name: text,
+            done: false
+        }
     }
+
 return (
     <div>
-        <form>
-            <input type="text" onChange={(e) => props.setState({ input: e.target.value })} />
-            <button type="submit" onClick={e => props.setState({list: [...props.state.list, props.state.input], input: '' })}>Add Item</button>
-        </form>
+        <input type="text" onChange={e => setText(e.target.value)} />
+        <button onClick={e => props.onSubmit(buildTodo()) }>Add Item</button>
     </div>
 )
-
-
-
 
 }
