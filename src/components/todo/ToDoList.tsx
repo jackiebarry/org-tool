@@ -3,6 +3,7 @@ import { List, ListItem, ListItemButton, ListItemIcon, Checkbox, ListItemText} f
 import ToDoListItem from './ToDoListItem';
 import * as React from 'react';
 import ToDoInput from './ToDoInput';
+import ToDo from './ToDo';
 
 interface Todo {
     id: number;
@@ -22,7 +23,7 @@ export default function ToDoList() {
     const onToggle = (id: number) => {
         const idx = items.findIndex(item => item.id === id);
 
-        if (!idx) {
+        if (idx === -1) {
             return;
         }
 

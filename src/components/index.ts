@@ -1,2 +1,2 @@
 export * from './Month';
-export * from './Stack';
+export * from './StackedItems';

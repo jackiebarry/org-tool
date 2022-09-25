@@ -2,7 +2,9 @@ import * as React from 'react';
 import ToDo from './todo/ToDo';
 import ToDoList from './todo/ToDoList';
 import Month from './Month';
-import Stack from './Stack';
+import StackedItems from './StackedItems';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 import './App.css';
 
 
@@ -12,8 +14,16 @@ export default function App() {
     <div className="App">
       <header className="App-header">
       </header>
-      <Stack />
-      <Month />
+      <Stack
+        direction="row"
+        divider={<Divider orientation="vertical" flexItem />}
+        spacing={2}
+      >
+      <StackedItems />
+      <ToDo />
+  
+      </Stack>
+     
       </div>
   );
 }
